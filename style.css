@@ -1,0 +1,315 @@
+body {
+    background-color: #faf5f1;
+    font-family: 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+  }
+
+  
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 22px;
+    margin: 10px 0 5px;
+    color: #4d3c35;
+  }
+
+  
+  .container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 350px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(39, 26, 0, 0.1);
+    animation: fadeSlideIn 0.8s ease-out both;
+  }
+  
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    animation: blink 3s ease-in-out infinite;
+  }
+  
+  p {
+    color: #8a7c74;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .link-button {
+    display: block;
+    background-color: #e6d7cb;
+    color: #4d3c35;
+    text-decoration: none;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.1s ease, background-color 0.3s ease;
+  }
+  
+  .link-button:hover {
+    background-color: #d4c3b8;
+  }
+  
+  .link-button:active {
+    transform: scale(0.95);
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+    color: #a39385;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  /* Animations */
+  @keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 24px;
+    }
+  
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .container {
+      padding: 20px;
+    }
+  }
+  
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .container {
+      padding: 20px;
+    }
+  .social-icons a:hover {
+  animation: bounce 0.5s;
+  color: #4d3c35;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+/* Vagues animées */
+.wave-container {
+    position: fixed;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 250px;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .wave {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, #fffbf3, #3d240a);
+    border-radius: 100%;
+    opacity: 0.4;
+    top: -50px; 
+  }
+  
+  .wave1 {
+    animation: animateWave 10s linear infinite;
+  }
+  
+  .wave2 {
+    animation: animateWaveReverse 15s linear infinite;
+    opacity: 0.3;
+    top: -40px; /* pareil ici */
+  }
+
+  
+  @keyframes animateWave {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  @keyframes animateWaveReverse {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(50%); }
+  }
+  body {
+    background-color: #faf5f1;
+    font-family: 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Assure que la page occupe 100% de la hauteur de l'écran */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Empêche le défilement */
+}
+
+main {
+    flex: 1; /* Le contenu principal prend l'espace restant */
+}
+
+footer {
+    background-color: #f0e8d7;
+    padding: 20px;
+    text-align: left;
+    font-size: 14px; /* Augmente la taille du texte pour qu'il soit plus lisible */
+    color: #4d3c35;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%; /* Le footer occupe 100% de la largeur */
+    /*____________max-width: 100%; /* S'assure qu'il ne dépasse jamais 100% */
+    height: 60px; /* Hauteur du footer */
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+}
+
+footer .footer-links {
+    margin-top: 10px;
+}
+
+footer .footer-links a {
+    margin: 0 10px;
+    color: #4d3c35;
+    text-decoration: none;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* 🔷 Barre supérieure */
+.top-bar {
+    width: 100vw;
+    background-color: #d4c3b8; /* couleur unie sans transparence */
+    color: #4d3c35;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 10;
+
+    /* Optionnel si tu utilisais de l'opacité */
+    opacity: 1; /* assure-toi que ce soit à 1 */
+}
+.a-blink {
+  animation: blinkAnimation 1s steps(2, start) infinite;
+  color: #d35b5b;
+  font-weight: bold;
+}
+
+@keyframes blinkAnimation {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* 🔶 RESPONSIVE POUR PETITS ÉCRANS */
+@media screen and (max-width: 500px) {
+    .container {
+      padding: 15px;
+      max-width: 90vw;
+    }
+  
+    .link-button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .social-icons a {
+      font-size: 18px;
+      margin: 0 6px;
+    }
+  
+    .top-bar {
+      font-size: 13px;
+      padding: 8px 0;
+    }
+  
+    footer {
+      font-size: 12px;
+      padding: 15px;
+      height: auto;
+      text-align: center;
+    }
+  
+    footer .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+      margin-top: 5px;
+    }
+  
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  /* 🔷 RESPONSIVE POUR GRANDS ÉCRANS */
+@media screen and (min-width: 1200px){
+  footer {
+    font-size: 16px;
+    padding: 25px;
+    height: auto;
+  }
+
+  footer .footer-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .top-bar {
+    font-size: 16px;  /* Augmente la taille de la barre supérieure */
+    padding: 15px 0;
+  }
+}
+    
+  
+  
+
+
+
+
