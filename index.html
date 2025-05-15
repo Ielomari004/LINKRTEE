@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mon Linktree</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>  
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <a href="#home" class="header__nav-link">Accueil</a>
+            <a href="#about" class="header__nav-link">À propos</a>
+        </nav>
+    </header>
+
+    <main class="linktree-container">
+        <img
+          src="img/photomoi.jpg"
+          alt="Photo de profil"
+          class="linktree-container__profile-pic"
+        />
+        <h2 class="linktree-container__name">Inès El Omari</h2>
+        <p class="linktree-container__job-title">UX/UI designer</p>
+
+        <a href="mailto:ines.elomari03@gmail.com" class="linktree-container__button">contact</a>
+        <a href="https://www.figma.com/proto/mSNKqgmwsbqrNUgmiCoc5A/Untitled" class="linktree-container__button">Mon Portfolio</a>
+        <a href="CV/cv.pdf" class="linktree-container__button">Mon C.V.</a>
+
+
+        <div class="social-icons">
+            <a-blink href="https://www.instagram.com/ines_ello/" class="social-icons__link social-icons__link--blink" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a-blink>
+            <a-blink href="https://www.linkedin.com/in/in%C3%A8s-el-omari-7a5939228/" class="social-icons__link social-icons__link--blink" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a-blink>
+            <a-blink href="tel:0472710126" class="social-icons__link social-icons__link--blink" title="Téléphone">
+                <i class="fas fa-mobile-alt"></i>
+            </a-blink>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Inès El Omari — Tous droits réservés</p>
+        <div class="footer-links footer__links">
+            <a href="#privacy" class="footer__link">Politique de confidentialité</a>
+            <a href="#terms" class="footer__link">Conditions d'utilisation</a>
+        </div>
+    </footer>
+    <script>
+        // Gestion du clic sur les <a-blink> pour simuler un lien cliquable
+        document.querySelectorAll('a-blink').forEach(el => {
+            el.style.cursor = 'pointer';
+            el.addEventListener('click', e => {
+                const url = el.getAttribute('href');
+                if (!url) return;
+                if (url.startsWith('tel:')) {
+                    window.location.href = url;
+                } else {
+                    window.open(url, '_blank');
+                }
+            });
+        });
+    </script>
+      
+                <!-- Vagues décoratives -->
+                <div class="wave wave1"></div>
+                <div class="wave wave2"></div>
+
+</body>
+</html>
+
